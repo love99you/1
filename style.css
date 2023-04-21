@@ -3,13 +3,11 @@
     margin: 0;
 }
 
-@media (max-width: 767px) {
- body {
-        background: no-repeat center center;
-    }
-    #lovexf {
-        zoom: 0.8;
-    }
+body {
+    background:  no-repeat center center;
+    background-color: black;
+    background-size: cover;
+    height: 100vh;
 }
 
 body::after {
@@ -37,14 +35,12 @@ audio,
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.3rem;
     font-weight: bold;
-    color: #ffc0cb;
+    color: #ea80b0;
     letter-spacing: .05rem;
     -moz-animation: love-xf 1.2s alternate ease-in-out;
     -webkit-animation: love-xf 1.2s alternate ease-in-out;
     animation: love-xf 1.2s alternate ease-in-out;
     user-select: none;
-    -webkit-text-shadow: 0 0 8px #fff;
-    text-shadow: 0 0 8px #fff;
 }
 
 #lovexf {
@@ -66,4 +62,22 @@ audio,
         filter: blur(0);
         letter-spacing: .05rem;
     }
+}
+
+/* 爱心缩放 */
+@media screen and (max-width: 450px) {
+    #lovexf {
+        /* .5 指的是在画布原始大小上缩放一半 */
+        zoom: .5;
+        /* .3 就是缩放 3/10 */
+        /* zoom: .3; */
+        /* 大家自己尝试 */
+    }
+}
+
+video {
+    /* 隐藏 */
+    /*display: none;*/
+    /* 透明 */
+    /* opacity: 0; */
 }
